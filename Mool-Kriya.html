@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
 <meta charset="UTF-8" />
-<meta name="author" content="Chandra Shekhar Kumar" />
+<meta name="author" content="��������� �����" />
 <meta name="generator" content="LaTeX Lwarp package" />
 <meta name="description" content="Prachin Kriya Yog Sansthan (Ancient Kriya Yoga Mission)" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!--[if lt IE 9]>
 <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<title> Prachin Kriya Yog Sansthan</title>
+<title> Prachin Kriya Yog Sansthan — Mool Kriya</title>
 <link rel="stylesheet" type="text/css" href="lwarp_sagebrush.css" />
 
 <script>
@@ -75,59 +76,59 @@ MathJax = {
             useArgument(parser, star ? resultstar : resultnostar);
          },
 
-         // This function implements an ifnextchar macro.
-         IfnextcharFunction(parser, name) {
-           let whichchar = parser.GetArgument(name);
-           if (whichchar.match(/^(?:0x[0-9A-F]+|[0-9]+)$/i)) {
-             // $ syntax highlighting
-             whichchar = String.fromCodePoint(parseInt(whichchar));
-           }
-           const resultnextchar = parser.GetArgument(name);
-           const resultnotnextchar = parser.GetArgument(name);
-           const gotchar = (parser.GetNext() === whichchar);
-           useArgument(parser, gotchar ? resultnextchar : resultnotnextchar);
-         },
+          // This function implements an ifnextchar macro.
+          IfnextcharFunction(parser, name) {
+            let whichchar = parser.GetArgument(name);
+            if (whichchar.match(/^(?:0x[0-9A-F]+|[0-9]+)$/i)) {
+              // $ syntax highlighting
+              whichchar = String.fromCodePoint(parseInt(whichchar));
+            }
+            const resultnextchar = parser.GetArgument(name);
+            const resultnotnextchar = parser.GetArgument(name);
+            const gotchar = (parser.GetNext() === whichchar);
+            useArgument(parser, gotchar ? resultnextchar : resultnotnextchar);
+          },
 
-         // This function implements an ifblank macro.
-         IfblankFunction(parser, name) {
-           const blankarg = parser.GetArgument(name);
-           const resultblank = parser.GetArgument(name);
-           const resultnotblank = parser.GetArgument(name);
-           const isblank = (blankarg.trim() == "");
-           useArgument(parser, isblank ? resultblank : resultnotblank);
-         },
+          // This function implements an ifblank macro.
+          IfblankFunction(parser, name) {
+            const blankarg = parser.GetArgument(name);
+            const resultblank = parser.GetArgument(name);
+            const resultnotblank = parser.GetArgument(name);
+            const isblank = (blankarg.trim() == "");
+            useArgument(parser, isblank ? resultblank : resultnotblank);
+          },
 
-         // This function implements an ifstrequal macro.
-         IfstrequalFunction(parser, name) {
-           const strequalfirst = parser.GetArgument(name);
-           const strequalsecond = parser.GetArgument(name);
-           const resultequal = parser.GetArgument(name);
-           const resultnotequal = parser.GetArgument(name);
-           const isequal = (strequalfirst == strequalsecond);
-           useArgument(parser, isequal ? resultequal : resultnotequal);
-         },
+          // This function implements an ifstrequal macro.
+          IfstrequalFunction(parser, name) {
+            const strequalfirst = parser.GetArgument(name);
+            const strequalsecond = parser.GetArgument(name);
+            const resultequal = parser.GetArgument(name);
+            const resultnotequal = parser.GetArgument(name);
+            const isequal = (strequalfirst == strequalsecond);
+            useArgument(parser, isequal ? resultequal : resultnotequal);
+          },
 
-         // This function implements a gsub macro.
-         GsubstituteFunction(parser, name) {
-           const gsubfirst = parser.GetArgument(name);
-           const gsubsecond = parser.GetArgument(name);
-           const gsubthird = parser.GetArgument(name);
-           let gsubresult=gsubfirst.replace(gsubsecond, gsubthird);
-           useArgument(parser, gsubresult);
-         },
+          // This function implements a gsub macro.
+          GsubstituteFunction(parser, name) {
+            const gsubfirst = parser.GetArgument(name);
+            const gsubsecond = parser.GetArgument(name);
+            const gsubthird = parser.GetArgument(name);
+            let gsubresult=gsubfirst.replace(gsubsecond, gsubthird);
+            useArgument(parser, gsubresult);
+          },
 
-         // This function modifies the equation numbers.
-         SeteqnumberFunction(parser, name) {
-             // Get the macro parameters
-             const star = parser.GetStar();                  // true if there is a *
-             const optBrackets = parser.GetBrackets(name);   // contents of optional brackets
-             const newsubequations = parser.GetArgument(name); // the subequations argument
-             const neweqsection = parser.GetArgument(name); // the eq section argument
-             const neweqnumber = parser.GetArgument(name);   // the eq number argument
-             MathJax.config.subequations=newsubequations ;   // a string with boolean meaning
-             MathJax.config.section=neweqsection ;           // a string with numeric meaning
-             parser.tags.counter = parser.tags.allCounter = neweqnumber ;
-         }
+          // This function modifies the equation numbers.
+          SeteqnumberFunction(parser, name) {
+              // Get the macro parameters
+              const star = parser.GetStar();                  // true if there is a *
+              const optBrackets = parser.GetBrackets(name);   // contents of optional brackets
+              const newsubequations = parser.GetArgument(name); // the subequations argument
+              const neweqsection = parser.GetArgument(name); // the eq section argument
+              const neweqnumber = parser.GetArgument(name);   // the eq number argument
+              MathJax.config.subequations=newsubequations ;   // a string with boolean meaning
+              MathJax.config.section=neweqsection ;           // a string with numeric meaning
+              parser.tags.counter = parser.tags.allCounter = neweqnumber ;
+          }
 
        });
 
@@ -223,7 +224,48 @@ MathJax = {
 <body>
 
 
-<div class="bodywithoutsidetoc">
+<a id="prachin-autopage-4"></a>
+<nav class="topnavigation"><a href="index.html" class="linkhome" >
+Home</a></nav>
+
+
+<div class="bodyandsidetoc">
+<div class="sidetoccontainer">
+
+
+<nav class="sidetoc">
+
+
+<div class="sidetoctitle">
+
+<p>
+<span class="sidetocthetitle"> Prachin Kriya Yog Sansthan</span>
+</p>
+
+<p>
+Contents
+</p>
+</div>
+
+
+<div class="sidetoccontents">
+
+<p>
+<a href="index.html" class="linkhome" >
+Home</a>
+</p>
+
+<p>
+<a href="Mool-Kriya.html#autosec-5" class="tocchapter" >
+<span class="sectionnumber">1</span>&#x2003;Mool Kriya</a>
+</p>
+
+
+</div>
+
+</nav>
+
+</div>
 
 
 <main class="bodycontainer">
@@ -231,7 +273,7 @@ MathJax = {
 
 <section class="textbody">
 
-<a id="prachin-autofile-0"></a>
+<h1> Prachin Kriya Yog Sansthan</h1>
 
 <!--MathJax customizations:-->
 
@@ -360,67 +402,67 @@ MathJax = {
 
 </div>
 
-<a id="prachin-autopage-1"></a>
+<p>
+<!--
+...... chapter Mool Kriya ......
+-->
+<h3 id="autosec-5"> क्रिया ग्रन्थ&nbsp;<span class="sectionnumber">1&#x2003;</span>Mool Kriya</h3>
+<a id="prachin-autopage-5"></a>
+<a id="prachin-autofile-1"></a>
+
+<p>
+मूल क्रिया
+</p>
 <div class="center">
 
 <p>
 
-<a href="logo.svg" target="_blank" ><img
-    src="logo.svg"
+<a href="moolkriya.svg" target="_blank" ><img
+    src="moolkriya.svg"
     class="inlineimage"
     alt="(image)"
 ></a>
 </p>
 
 <p>
-ancientkriyayoga@gmail.com
-</p>
-
-<p>
-prachinkriya@gmail.com
-</p>
-
-<p>
-प्राचीन क्रिया योग तान्त्रिक ग्रन्थ
-</p>
-
-<p>
-भगवान् महर्षि हिरण्यगर्भ
-</p>
-
-<p>
-लाहिड़ी महाशय
-</p>
-
-<p>
-चन्द्रशेखर कुमार
+<a href="https://store.pothi.com/book/bhagwan-maharishi-hiranyagarbha-mool-kriya-prachin-guhya-kaali-padarth-vidya-niralambopanishad/" target="_blank" >Indian Print Copy</a>
 </p>
 </div>
-<!--
-...... chapter ������ ������ ���� ......
--->
-<h3 id="autosec-3"> क्रिया ग्रन्थ सूची</h3>
-<a id="prachin-autopage-3"></a>
-
-
-
-<nav class="toc">
 
 <p>
-<a href="Mool-Kriya.html#autosec-5" class="tocchapter" >
-<span class="sectionnumber">1</span>&#x2003;Mool Kriya</a>
+<span style="width:14pt; display:inline-block"><!----></span>  क्रिया ही उपनिषद् है एवं उपनिषद् ही क्रिया है।  मूल क्रिया की गणना योगभक्तिपरक विज्ञान के पारिभाषिक विषयों में की जाती रही है।  सत्यपथगामी साधक इस गुह्य पदार्थ विज्ञान की अन्तर्निहित जटिलताओं के फलस्वरूप प्रायः दिग्भ्रमित हो जाते हैं।
 </p>
-</nav>
 
 <p>
-*
+<span style="width:14pt; display:inline-block"><!----></span> प्राचीन क्रिया योग संस्थान (कूटस्थिते  दिव्यचक्षुदर्शितेन् संचालितः दिव्यः उपक्रमः) (सिद्धाश्रमे अवस्थितः मठ:) के एक मूर्धन्य मनीषि एवं रहस्यवादी गृहस्थ योगी ने अपनी अनन्य योग भक्ति तथा प्राणायाम के सघन अभ्यास से इस दुष्प्राप्य क्रिया को पुनः प्राप्त किया।
 </p>
 
+<p>
+<span style="width:14pt; display:inline-block"><!----></span> इस पुस्तक की रचना का आधार अन्तःपुर में 'निरालम्बोपनिषद्' के गूढ़ अर्थों एवं अलौकिक अनुभूतियों का रहस्योद्घाटन है। इस पारलौकिक स्पंदन को लेखनी में समाहित करना अति दुष्कर होता अगर ये कार्य सिद्ध साधन निर्देशित न होता। अनिर्वचनीय, अलौकिक एवं अद्भुत आनंद से परिपूर्ण इस साधना यात्रा में मूल क्रिया साख्य भाव दर्शित तथा सम्पूर्ण समर्पण के आभिर्भावभूत लक्षित हुई। इसी विशिष्ट अवस्था की समग्रता का समावेश इस रचना में लेखनीवश समाहित है।
+</p>
+
+<p>
+<span style="width:14pt; display:inline-block"><!----></span> कालांतर में साधक को ये सत्य विदित होता है कि यह एक सार्वभौम क्रिया है एवं इसका प्रत्येक 'शब्द' अक्षुण्ण, पारलौकिक एवं अक्षय है जिसका प्रादुर्भाव सामान्यतः अगोचर है। ये सर्वदा गुंजायमान है एवं सिद्धों द्वारा इनके अनवरत तथा अद्भुत कालातीत जप का श्रवण साधक को उपयुक्त काल में होता है। 
+</p>
+
+<a id="prachin-autofile-last"></a>
 </section>
 
 </main>
 
 </div>
+
+<footer>
+
+<p>
+Copyright : Chandra Shekhar Kumar Email : ancientkriyayoga@gmail.com
+</p>
+
+</footer>
+
+
+<nav class="botnavigation"><a href="index.html" class="linkhome" >
+Home</a></nav>
 
 </body>
 </html>
